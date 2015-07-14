@@ -69,7 +69,7 @@ function insertBefore(doc, locator, str) {
 
 var numberIndex = 1;
 var edit = {
-  xhtml_smallCaps: function(doc) {
+  xhtml_SmallCaps: function(doc) {
     return doc.replace(/(?:<span class=("|')small-caps(?:[\s]*|[\s]char-style-override-\d)\1>)([^<]+)(?:<\/span>)/g,
     function(match, g1, g2, offset, str) {
       return match.replace(g2, g2.toUpperCase());
