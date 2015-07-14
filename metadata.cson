@@ -1,0 +1,287 @@
+toc_file: 'toc.xhtml'
+toc_id: 'Contents'
+start_reading_file: 'title.xhtml'
+start_reading_id: 'full-title'
+
+regexes:
+  css: [
+    {
+      find: '\\s*-epub-ruby-position:over;\\n\\s*color:#000000;'
+      replace: ''
+    }
+    {
+      find: '\\s*body\\s*{\\n\\s*-epub-hyphens:auto;\\n\\s*-webkit-hyphens:auto;\\n\\s*}'
+      replace: ''
+    }
+    {
+      find: '\\s*body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {\\n\\s*margin:0;\\n\\s*padding:0;\\n\\s*border-width:0;\\n\\s*}\\n'
+      replace: 'body { margin:0; }\n\n'
+    }
+    {
+      find: '\\s*@page\\s*{\\n\\s*margin\\s*:\\s*0px 0px 0px 0px;\\n\\s*}\\n'
+      replace: ''
+    }
+    {
+      find: '\\s*td,\\s*th\\s*{\\n\\s*border-style\\s*:\\s*solid;\\n\\s*border-width\\s*:\\s*1px;\\n\\s*}\\n'
+      replace: ''
+    }
+    {
+      find: '\\s*table\\s*{\\n\\s*border-collapse\\s*:\\s*collapse;\\n\\s*}\\n'
+      replace: ''
+    }
+    {
+      find: '\\s*li\\s*{\\n\\s*display\\s*:\\s*block;\\n\\s*}\\n'
+      replace: ''
+    }
+    {
+      find: '\\s*(img|div)\\.frame-\\d+\\s*{\\n\\s*height:(\\d+|\\d+\\.\\d+)(px|em);\\n\\s*width:(\\d+|\\d+\\.\\d+)(px|em);\\n}\\n'
+      replace: ''
+    }
+    {
+      find: '\\s*(img|div)\\.frame-\\d+\\s*{\\nborder-style:(solid)(px|em);\\nborder-width:(\\d+|\\d+\\.\\d+)(px|em);\\nheight:(\\d+|\\d+\\.\\d+)(px|em);\\nwidth:(\\d+|\\d+\\.\\d+)(px|em);\\n}\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*color\\s*:#\\d+;'
+      replace: ''
+    }
+    {
+      find: '\\t*(font-style)\\s*:normal;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*font-weight\\s*:normal;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*font-variant\\s*:normal;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*-epub-hyphens\\s*:none;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*-webkit-hyphens\\s*:none;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*text-decoration\\s*:none;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*text-transform\\s*:uppercase;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*text-align\\s*:(left|justify);\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*font-variant\\s*:small-caps;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*margin-bottom\\s*:0px;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*margin-left\\s*:0px;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*margin-right\\s*:0px;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*margin-top\\s*:0px;\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*text-indent\\s*:0px;\\n'
+      replace: ''
+    }
+    {
+      find: '\\s*font-family\\s*:\\s*.+?, serif;'
+      replace: '\n\tfont-family: serif;'
+    }
+    {
+      find: '\\s*font-family\\s*:\\s*.+?, sans-serif;'
+      replace: '\n\tfont-family: sans-serif;'
+    }
+    {
+      find: 'text-indent\\s*: -1.3em;\\s*margin\\s*: 0px 0px 0px 1.3em;\\s*}'
+      replace: '''
+        text-indent : -1.3em;
+        \\tmargin : 0px 0px 0px 1.3em;
+        }
+        @media amzn-mobi {
+        \\tp.poem {
+        \\t\\tmargin: 0;
+        \\t}
+        }
+        '''
+    }
+    {
+      find: '\\s*(span|em)\\.(.+)\\s*{\\s*\\n}\\n'
+      replace: ''
+    }
+    {
+      find: '\\t*'
+      replace: ''
+    }
+    {
+      find: '\\n\\n'
+      replace: '\n'
+    }
+    {
+      find: '\\}'
+      replace: '\}\n'
+    }
+  ]
+  opf: []
+  xhtml: [
+    {
+      find: '<body id="(.+?)" xml:lang="en-US">'
+      replace: '<body>'
+    }
+    {
+      find: '[\\s\\S]</p>\\n[\\s\\S]</p>'
+      replace: '</p>'
+    }
+    {
+      find: ' \\. \\. \\.'
+      replace: '&nbsp;.&nbsp;.&nbsp;.'
+    }
+    {
+      find: '<img alt="(.+?)" class="(.+?)" src="(.+?)"/>'
+      replace: '<img alt="$1" src="$3"/>'
+    }
+    {
+      find: '<div class="frame-\\d+">'
+      replace: ''
+    }
+    {
+      find: ' –'
+      replace: '–'
+    }
+    {
+      find: '  '
+      replace: ' '
+    }
+    {
+      find: '<span class="(.+?) char-style-override-\\d+">([\\s\\S]*?)</span>'
+      replace: '<span class="$1">$2</span>'
+    }
+    {
+      find: '<span class="ItalicTrack0">([\\s\\S]*?)</span>'
+      replace: '<em>$1</em>'
+    }
+    {
+      find: '\\. \\. \\.'
+      replace: '.&nbsp;.&nbsp;.'
+    }
+    {
+      find: '<div class="Basic-Text-Frame">([\\s\\S]*?)</div>'
+      replace: '$1'
+    }
+    {
+      find: '<div class="Basic-Text-Frame frame-\\d+">([\\s\\S]*?)</div>'
+      replace: '$1'
+    }
+    {
+      find: '<div>([\\s\\S]*?)</div>'
+      replace: '$1'
+    }
+    {
+      find: '<div>(.+?)</div>'
+      replace: '$1'
+    }
+    {
+      find: '<div class="frame-\\d+">([\\s\\S]*?)</div>'
+      replace: '$1'
+    }
+    {
+      find: '<span class="char-style-override-\\d+">([\\s\\S]*?)</span>'
+      replace: '$1'
+    }
+    {
+      find: '<span class="SmallCapsOpenType">([\\s\\S]*?)</span>'
+      replace: '<small>$1</small>'
+    }
+    {
+      find: '<span class="SmallCapsOpenType SmallCapsOpenType">([\\s\\S]*?)</span>'
+      replace: '<small>$1</small>'
+    }
+    {
+      find: '<span class="ProportionalOldstyle-\\d+ SmallCapsOpenType">(.+?)</span>'
+      replace: '<small>$1</small>'
+    }
+    {
+      find: '<span class="SmallCapsOpenType ProportionalOldstyle-\\d+">(.+?)</span>'
+      replace: '<small>$1</small>'
+    }
+    {
+      find: '<span class="ProportionalOldstyle-\\d+">([\\s\\S]*?)</span>'
+      replace: '$1'
+    }
+    {
+      find: '<span class="ProportionalOldstyle-\\d+(.+?)">([\\s\\S]*?)</span>'
+      replace: '$2'
+    }
+    {
+      find: '<span class="Track-\\d+">([\\s\\S]*?)</span>'
+      replace: '$1'
+    }
+    {
+      find: '<span class="(.+?)Superscript(.+?)">([\\s\\S]*?)</span>'
+      replace: '<sup>$3</sup>'
+    }
+    {
+      find: '<span class="FractionsOpenType NO-fractions">([\\s\\S]*?)</span>'
+      replace: '<sup>$1</sup>'
+    }
+    {
+      find: '<span class="(.+?)Superscript">([\\s\\S]*?)</span>'
+      replace: '<sup>$2</sup>'
+    }
+    {
+      find: '<span class="Superscript(.+?)">([\\s\\S]*?)</span>'
+      replace: '<sup>$2</sup>'
+    }
+    {
+      find: '<span class="Superscript">([\\s\\S]*?)</span>'
+      replace: '<sup>$1</sup>'
+    }
+    {
+      find: '<em class=".+?">([\\s\\S]*?)</em>'
+      replace: '<em>$1</em>'
+    }
+    {
+      find: '</em><em>'
+      replace: ''
+    }
+    {
+      find: '<span class="ItalicTrack0"/>'
+      replace: ''
+    }
+    {
+      find: '</small><small>'
+      replace: ''
+    }
+    {
+      find: '<p class="(.+)"></p>'
+      replace: ''
+    }
+    {
+      find: '<p class="Basic-Paragraph">'
+      replace: '<p>'
+    }
+    {
+      find: '<p class="(.+)"/>'
+      replace: ''
+    }
+    # Arc
+    # - find: '<p class="colophon">(?=(\\d|\\s)+\\(e)'
+    #   replace: '<p class="colophon isbn">'
+  ]

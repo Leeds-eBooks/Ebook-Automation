@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="2.0">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta name="generator" content="Adobe InDesign" />
+		<dc:title>Dummy_EPUB</dc:title>
+		<dc:creator></dc:creator>
+		<dc:subject></dc:subject>
+		<dc:description></dc:description>
+		<dc:publisher>Greystone Books</dc:publisher>
+		<dc:date>2015-06-02</dc:date>
+		<dc:source></dc:source>
+		<dc:relation></dc:relation>
+		<dc:coverage></dc:coverage>
+		<dc:rights></dc:rights>
+		<dc:language>en-US</dc:language>
+		<dc:identifier id="bookid">urn:uuid:0D34F956-53CB-4221-8C53-133DF8CB38D5</dc:identifier>
+	</metadata>
+	<manifest>
+		<item id="Dummy_Int_EPUB" href="Dummy_Int_EPUB.xhtml" media-type="application/xhtml+xml" />
+		<item id="Dummy_Int_EPUB-1" href="Dummy_Int_EPUB-1.xhtml" media-type="application/xhtml+xml" />
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+		<item id="Dummy_EPUB_idstyles.css" href="css/Dummy_EPUB_idstyles.css" media-type="text/css" />
+	</manifest>
+	<spine toc="ncx">
+		<itemref idref="Dummy_Int_EPUB" />
+		<itemref idref="Dummy_Int_EPUB-1" />
+	</spine>
+	<guide>
+		<reference href="Text/toc.xhtml#Contents" title="Table of Contents" type="toc" />
+		<reference href="Images/cover.jpg" type="cover" />
+		<reference href="Text/title.xhtml#full-title" title="Start Reading" type="text" />
+	</guide>
+</package>

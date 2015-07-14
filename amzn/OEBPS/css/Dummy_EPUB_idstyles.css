@@ -1,0 +1,119 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+td, th {
+	border-style:solid;
+	border-width:1px;
+}
+table {
+	border-collapse:collapse;
+}
+li {
+	display:block;
+}
+body {
+	-epub-hyphens:auto;
+	-webkit-hyphens:auto;
+}
+@page {
+	margin : 0px 0px 0px 0px;
+}
+p.ind {
+	color:#000000;
+	font-family:"Lyon Text Regular", serif;
+	font-size:0.854em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.366;
+	margin-bottom:0px;
+	margin-left:18px;
+	margin-right:0px;
+	margin-top:0px;
+	text-align:justify;
+	text-decoration:none;
+	text-indent:1.3em;
+}
+h1.chaptitle {
+	color:#000000;
+	font-family:"Gotham (T1) Light", sans-serif;
+	font-size:0.917em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:1.455;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:12px;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0px;
+	text-transform:uppercase;
+}
+h2.chapnum {
+	color:#000000;
+	font-family:"Lyon Text Regular", serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.167;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0px;
+}
+h3.chapsub {
+	color:#000000;
+	font-family:"Lyon Text Regular", serif;
+	font-size:0.854em;
+	font-style:normal;
+	font-variant:small-caps;
+	font-weight:normal;
+	line-height:1.366;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:15px;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0px;
+}
+p.dropcap {
+	color:#000000;
+	font-family:"Lyon Text Regular", serif;
+	font-size:0.854em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.366;
+	margin-bottom:0px;
+	margin-left:18px;
+	margin-right:0px;
+	margin-top:1.3em;
+	text-align:justify;
+	text-decoration:none;
+	text-indent:0px;
+}
+span.char-style-override-1 {
+	font-size:4.902em;
+	float:left;
+	line-height:1;
+	margin-top:-0.148em;
+	margin-right:0.05em;
+	-adobe-float-keep:column;
+	margin-bottom:-0.148em;
+	font-family:Niagara, serif;
+	font-weight:300;
+	font-style:normal;
+}
+@media amzn-mobi, amzn-kf8 {
+	.isbn {display: none;}
+}@media amzn-mobi, amzn-kf8 {
+	.isbn {display: none;}
+}
